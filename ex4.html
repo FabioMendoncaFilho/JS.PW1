@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/l2.png"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html"><img id="logo" src="img/l2.png" alt=""></a>
+        <a class="navbar-brand" href="index.html">ÚTIL</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+</nav>
+<br><br>
+    <script>
+        function calcular()
+        {
+            var Km=document.getElementById('Km').value;
+            var preço=document.getElementById('preço').value;
+            var resultado=((Km/8)*preço)
+            document.getElementById('resultado').innerHTML="R$ "+resultado
+        }
+    </script>
+        <center>
+            <h1>PREÇO POR LITRO</h1><br><br><br>
+            <div class="container2">
+            <form action="" method="post">
+                Digite a quantidade de Km percorrido: <input class="form-control" type="text" id="Km"><br><br>
+                Digite o preço do combustivel: <input class="form-control" type="text" id="preço" onblur="calcular()"><br><br>
+                <input class="btn btn-dark" type="button" onclick="calcular()" value="Calcular">
+            </form>
+          </div>
+            <br><br><br>
+            <h1>O preço por Litro será:</h1><br>
+            <h2 id="resultado"></h2>
+        </center>
+</body>
+</html>

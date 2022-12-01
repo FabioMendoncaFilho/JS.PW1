@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+*{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#logo{
+    width: 32px;
+}
+
+#name1, #qnt1, #preco1,#name2, #qnt2, #preco2,#name3, #qnt3, #preco3{
+    width: 100%;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#n1, #graus{
+    width: 100%;
+}
+
+
+.card{
+    transition: 0.6s;
+}
+
+.card:hover{
+    box-shadow: 10px 10px 30px rgba(56, 56, 56, 0.26); 
+}
+
+
+  /* FOOTER BOTTOM */
+  #footer-bottom {
+    border-top: 1px solid #7a7a7a;
+    padding-top: 2em;
+  }
+  
+  #footer-bottom i {
+    color: #e61e10;
+  }
+  
+  @media (min-width: 768px) {
+    #news-container {
+      padding-right: 2em;
+    }
+  
+    #contact-container {
+      padding: 0 2em;
+      border-left: 1px solid #7a7a7a;
+      border-right: 1px solid #7a7a7a;
+    }
+  
+    #links-container {
+      padding-left: 2em;
+    }
+  }
+
+.btn{
+  transition: .45s;
+}
+
+.btn:hover{
+  box-shadow: 5px 5px 15px rgba(56, 56, 56, 0.438); 
+}

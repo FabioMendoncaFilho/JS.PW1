@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html"><img id="logo" src="img/l2.png" alt=""></a>
+              <a class="navbar-brand" href="index.html">ÚTIL</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+      </nav><br><br><br><br>
+
+    <script>
+        function crescente() {
+            var a1 = parseInt(document.getElementById('P').value)
+            var an = parseInt(document.getElementById('U').value)
+            var r = parseInt(document.getElementById('R').value)
+            var resultado = []
+
+            resultado = cresc(a1, an, r)
+            alert("A ordem será: \n" + alerta(resultado))
+        }
+
+        function cresc(primeiro, segundo, r) {
+            var i = 0;
+            var lista = [];
+            var valorIni = 0;
+            var valorFinal = 0
+
+            if (primeiro > segundo) {
+                valorIni = segundo;
+                valorFinal = primeiro;
+            }
+            else if (primeiro < segundo) {
+                valorIni = primeiro;
+                valorFinal = segundo;
+            }
+            else {
+                valorIni = primeiro
+                valorFinal = primeiro + 1;
+            }
+            for (var n = valorIni; n <= valorFinal; n = n + r) {
+                lista[i] = n;
+                i++
+            }
+            return lista;
+        }
+
+
+        function alerta(lista) {
+            var t = "";
+            for (var n in lista) {
+                t = t + lista[n] + "\n"
+            }
+            return t;
+        }
+
+        function descrecente(){
+            var a1 = parseInt(document.getElementById('P').value)
+            var an = parseInt(document.getElementById('U').value)
+            var r = parseInt(document.getElementById('R').value)
+            resultado = []
+
+            resultado = desc(a1, an, r)
+            alert("A ordem será: \n" + alerta(resultado))
+
+        }
+
+
+        function desc(primeiro, segundo, r){
+            var i = 0;
+            var lista = [];
+            var valorIni = 0;
+            var valorFinal = 0
+
+            if (primeiro > segundo) {
+                valorIni = segundo;
+                valorFinal = primeiro;
+            }
+            else if (primeiro < segundo) {
+                valorIni = primeiro;
+                valorFinal = segundo;
+            }
+            else {
+                valorIni = primeiro
+                valorFinal = primeiro + 1;
+            }
+            for (var n = valorFinal; n >= valorIni; n = n - r) {
+                lista[i] = n;
+                i++
+            }
+            return lista;
+            
+        }
+
+    </script>
+
+    <center>
+    <h1>Maior e menor</h1><br><br>
+    <div class="container2">
+    <form action="">
+    <label for="a1">Primeiro termo:</label>
+    <input class="form-control" id="P" name="textinput" value="" type="number"><br>
+
+    <label for="an">Ultimo termo:</label>
+    <input class="form-control" id="U" name="textinput" value="" type="number"><br>
+
+    <label for="r">Razão:</label>
+    <input class="form-control" id="R" name="textinput" value="" type="number"><br><br><br>
+
+   <button class="btn btn-dark" onclick="crescente()">Crescente</button>
+   <button class="btn btn-dark" onclick="descrecente()">Descrecente</button>
+
+</form>
+</div>
+</center>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/l2.png"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html"><img id="logo" src="img/l2.png" alt=""></a>
+        <a class="navbar-brand" href="index.html">ÚTIL</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+</nav><br><br><br>
+
+    <script>
+        function calcular(){
+            var qnt1=(document.getElementById('qnt1').value)
+            var preço1=(document.getElementById('preco1').value)
+            var total1=(qnt1*preço1)
+
+            var qnt2=(document.getElementById('qnt2').value)
+            var preço2=(document.getElementById('preco2').value)
+            var total2=(qnt2*preço2)
+
+            var qnt3=(document.getElementById('qnt3').value)
+            var preço3=(document.getElementById('preco3').value)
+            var total3=(qnt3*preço3)
+            
+            var total=(total1+total2+total3)
+            document.getElementById('total').innerHTML=total
+        }
+    </script>
+
+    <center><h1>SOMA DE 3 PRODUTOS</h1>
+    <br><br><br>
+    <div class="container">
+    <div class="box1">
+    <form action="" method="post">
+        Digite o nome do produto 1: <input class="form-control" type="text" id="name1"><br>
+        Digite a quantidade do produto 1:<input class="form-control" type="text" id="qnt1"><br>
+        Digite o preço do pruduto 1: <input class="form-control" type="text" id="preco1"><br><br>
+    </form>
+  </div>
+    <br>
+    <div class="box2">
+    <form action="" method="post">
+        Digite o nome do produto 2: <input class="form-control" type="text" id="name2"><br>
+        Digite a quantidade do produto 2:<input class="form-control type="text" id="qnt2"><br>
+        Digite o preço do pruduto 2: <input class="form-control type="text" id="preco2"><br><br>
+    </form>
+    </div>
+    <br>
+    <div class="box3">
+    <form action="" method="post">
+      Digite o nome do produto 3: <input class="form-control" type="text" id="name3"><br>
+        Digite a quantidade do produto 3:<input class="form-control" type="text" id="qnt3"><br>
+        Digite o preço do pruduto 3: <input class="form-control" type="text" id="preco3"><br>
+    </form>
+    </div>
+  </div>
+    <br><br>
+    <input class="btn btn-dark" type="button" onclick="calcular()" value="Calcular"><br><br><br>
+    <h1 id="total"></h1></center><br><br><br>
+</body>
+</html>
